@@ -38,6 +38,10 @@ Analysis and commentary on venture and private markets, written for LPs, VCs, fo
 
 Venture capital (LPs, VCs & operators) and startup folks from around the world have shared their insights across editions of the Big Book and as guests on TheOnePoint.
 
+## Files
+
+`index.html` is the page; `assets/covers/` holds the report covers and `assets/contributors.webp` holds all the contributor photos in one image. Upload the whole folder, keeping that structure — the page loads the images by those paths, so they must sit next to `index.html`.
+
 ---
 
 Built by [Rohit Yadav, CAIA](https://www.linkedin.com/in/rohityadav23/). Founder of [Big Book of VC](https://bigbook.vc).
