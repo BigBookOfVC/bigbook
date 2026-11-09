@@ -29,6 +29,20 @@
   .wrap { padding-left:clamp(1.25rem,8vw,9rem); padding-right:clamp(1.25rem,8vw,9rem); }
 
   /* Header */
+  /* Announcement ticker */
+  .sr-only { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+  .ticker { display:block; background:var(--signal); color:#000; text-decoration:none; overflow:hidden; position:relative; transition:background .2s; }
+  .ticker:hover { background:#e8d93f; }
+  .ticker:focus-visible { outline:2px solid #000; outline-offset:-3px; }
+  .tick-track { display:flex; width:max-content; animation:tickRun 125s linear infinite; }
+  .tick-group { display:flex; flex:none; }
+  .tick-item { flex:none; display:inline-flex; align-items:center; white-space:nowrap;
+               padding:.46rem 2.2rem; font-family:var(--mono); font-size:.72rem; font-weight:500;
+               letter-spacing:.08em; line-height:1.4; }
+  .tick-item::after { content:""; flex:none; width:5px; height:5px; margin-left:2.2rem; background:#000; transform:rotate(45deg); }
+  @keyframes tickRun { from { transform:translate3d(0,0,0); } to { transform:translate3d(-50%,0,0); } }
+  @media (prefers-reduced-motion: reduce) { .tick-track { animation:none; } }
+  @media (max-width:700px) { .tick-item { font-size:.68rem; padding:.42rem 1.5rem; } .tick-item::after { margin-left:1.5rem; } }
   .top { display:flex; align-items:center; justify-content:space-between; padding-top:1.1rem; padding-bottom:1.1rem; border-bottom:1px solid #333; position:sticky; top:0; z-index:50; background:#000; }
   html { scroll-padding-top:76px; }
   .top-actions { display:flex; align-items:center; gap:.7rem; }
@@ -246,6 +260,10 @@
 </style>
 </head>
 <body>
+<a class="ticker" href="https://docsend.com/v/7vk3c/state-of-energytech-2026?utm_source=bigbook.vc" target="_blank" rel="noopener">
+  <span class="sr-only">New Report: STATE OF ENERGYTECH 2026</span>
+  <div class="tick-track" aria-hidden="true"><span class="tick-group"><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span></span><span class="tick-group"><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span><span class="tick-item">New Report: STATE OF ENERGYTECH 2026</span></span></div>
+</a>
 <header class="top wrap">
   <a class="mark" href="https://www.bigbook.vc/" aria-label="Big Book of VC home"><b>BIGBOOK</b><span>.VC</span></a>
   <nav class="nav" id="mainNav" aria-label="Main">
